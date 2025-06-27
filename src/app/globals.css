@@ -1,10 +1,18 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  background-color: #f0f0f0;
+@import "tailwindcss";
 
-  margin: 50px;
+/* Avoid styling body with flex unless absolutely necessary */
+body {
+  background-color: #f0f0f0;
+  margin: 0;
   padding: 0;
 }
-@import "tailwindcss";
+
+/* Custom utility class for the page wrapper */
+.main-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

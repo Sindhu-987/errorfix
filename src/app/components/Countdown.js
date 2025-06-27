@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useState } from 'react';
 
 const getRemainingTime = () => {
@@ -15,22 +16,13 @@ const getRemainingTime = () => {
 
 export default function Countdown() {
   const [remaining, setRemaining] = useState(getRemainingTime());
-  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setRemaining(getRemainingTime());
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
-  
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!remaining || !mounted) {
-    return <div></div>;
-  }
 
   return (
     <div className="flex items-center justify-center space-x-4 p-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg">
