@@ -31,7 +31,7 @@ This is a **bug-fixed and improved** version of the [original repository](https:
 ## 🛠 How to Run Locally
 
 ```bash
-git clone https://github.com/your-username/Hackweek-Countdown-Crisis
+git clone https://github.com/Sindhu-987/Hackweek-Countdown-Crisis.git
 cd Hackweek-Countdown-Crisis
 npm install
 npm run dev
